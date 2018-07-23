@@ -31,7 +31,7 @@
 \definecolor{darkgreen}{rgb}{0,0.6,0}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\title[2018-07-25-codas-hep-ecosystem]{The Python Scientific Software Ecosystem}
+\title[2018-07-25-codas-hep-ecosystem]{The Scientific Python Ecosystem}
 \author{Jim Pivarski}
 \institute{Princeton University -- DIANA-HEP}
 \date{July 25, 2018}
@@ -80,7 +80,7 @@
 \begin{frame}{Why you can't ignore Python}
 \large
 \vspace{0.4 cm}
-All of the machine learning libraries I could find either have a Python interface or are primarily/exclusively Python.
+All of the deep learning libraries I could find either have a Python interface or are primarily/exclusively Python.
 
 \vspace{0.6 cm}
 \mbox{ } \includegraphics[height=0.8 cm]{sklearn-logo.png}
@@ -143,21 +143,21 @@ All of the machine learning libraries I could find either have a Python interfac
 \vspace{-0.2 cm}
 \begin{block}{Why Python is slow}
 \begin{itemize}
-\item<2-> Virtual machine between Python bytecode and the physical machine.
-\item<3-> Type-checking during execution, \underline{\it every time} in a tight for loop.
-\item<4-> Data are bloated and distributed in memory (pointer chasing).
-\item<5-> Global Interpreter Lock (GIL): parallel processing is not parallel.
+\item<3-> Virtual machine between Python bytecode and the physical machine.
+\item<4-> Type-checking during execution, \underline{\it every time} in a tight for loop.
+\item<5-> Data are bloated and distributed in memory \mbox{(cache line efficiency, pointer chasing).\hspace{-0.5 cm}}
+\item<6-> Global Interpreter Lock (GIL): parallel processing is not parallel.
 \end{itemize}
 \end{block}
 \end{uncoverenv}
 
-\begin{uncoverenv}<6->
+\begin{uncoverenv}<7->
 \begin{block}{Why Python is nevertheless good for science}
 \begin{itemize}
-\item<6-> Python usually just \underline{\it drives} compiled code (good C, C++, Fortran bindings).
-\item<7-> Many \underline{\it standard} precompiled libraries, which also release the GIL.
-\item<8-> \textcolor{darkorange}{\bf You start thinking in terms of ``slow control'' and ``fast math.''}
-\item<9-> \textcolor{red}{\bf Computational performance is not the same as user productivity!}
+\item<8-> Python usually just \underline{\it drives} compiled code (good C, C++, Fortran bindings).
+\item<9-> Many \underline{\it standard} precompiled libraries, which also release the GIL.
+\item<10-> \textcolor{darkorange}{\bf You start thinking in terms of ``slow control'' and ``fast math.''}
+\item<11-> \textcolor{red}{\bf Computational performance is not the same as user productivity!}
 \end{itemize}
 \end{block}
 \end{uncoverenv}
@@ -250,10 +250,12 @@ $\mathcal{O}(N)$ statically typed, probably vectorized native bytecode operation
 \includegraphics[width=\linewidth]{quantstack.png}
 \end{frame}
 
-
 \begin{frame}{}
-
-
+\huge
+\vspace{0.5 cm}
+\begin{center}
+Switch to the notebooks now\ldots
+\end{center}
 \end{frame}
 
 
