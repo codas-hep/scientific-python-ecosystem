@@ -122,7 +122,7 @@ All of the machine learning libraries I could find either have a Python interfac
 \end{columns}
 \end{frame}
 
-\begin{frame}{More significant: what has grown around Python}
+\begin{frame}{Also stolen from that talk\ldots}
 \vspace{0.1 cm}
 \begin{columns}[b]
 \column{0.75\linewidth}
@@ -134,8 +134,37 @@ All of the machine learning libraries I could find either have a Python interfac
 \end{columns}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{``Python is a slow language''}
+\vspace{0.2 cm}
+\begin{block}{Quibble: \textcolor{black}{A \underline{\it language} is neither fast nor slow. (But CPython is pretty slow.)}}
+\end{block}
+
+\begin{uncoverenv}<2->
+\vspace{-0.2 cm}
+\begin{block}{Why Python is slow}
+\begin{itemize}
+\item<2-> Virtual machine between Python bytecode and the physical machine.
+\item<3-> Type-checking during execution, \underline{\it every time} in a tight for loop.
+\item<4-> Data are bloated and distributed in memory (pointer chasing).
+\item<5-> Global Interpreter Lock (GIL): parallel processing is not parallel.
+\end{itemize}
+\end{block}
+\end{uncoverenv}
+
+\begin{uncoverenv}<6->
+\begin{block}{Why Python is nevertheless good for science}
+\begin{itemize}
+\item<6-> Python usually just \underline{\it drives} compiled code (good C, C++, Fortran bindings).
+\item<7-> Many \underline{\it standard} precompiled libraries, which also release the GIL.
+\item<8-> \textcolor{darkorange}{\bf You start thinking in terms of ``slow control'' and ``fast math.''}
+\item<9-> \textcolor{red}{\bf Computational performance is not the same as user productivity!}
+\end{itemize}
+\end{block}
+\end{uncoverenv}
 \end{frame}
+
+
+
 
 
 \end{document}
