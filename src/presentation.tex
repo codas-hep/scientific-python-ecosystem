@@ -31,10 +31,10 @@
 \definecolor{darkgreen}{rgb}{0,0.6,0}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\title[2018-07-07-pyhep-pythonhistory]{The Python Scientific Software Ecosystem: \\ Past, Present and Future}
+\title[2018-07-25-codas-hep-ecosystem]{The Python Scientific Software Ecosystem}
 \author{Jim Pivarski}
 \institute{Princeton University -- DIANA-HEP}
-\date{July 7, 2018}
+\date{July 25, 2018}
 
 \begin{document}
 
@@ -53,15 +53,15 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{Why you shouldn't ignore Python}
+\begin{frame}{Why you can't ignore Python}
 \vspace{0.25 cm}
 \begin{center}
-\includegraphics[width=0.8\linewidth]{pypl-popularity.png}
+\only<1>{\includegraphics[width=0.8\linewidth]{pypl-popularity.png}}\only<2>{\includegraphics[width=0.8\linewidth]{pypl-popularity-2.png}}
 \end{center}
 \textcolor{blue}{\scriptsize\url{http://pypl.github.io/PYPL.html}}
 \end{frame}
 
-\begin{frame}{Why you shouldn't ignore Python}
+\begin{frame}{Why you can't ignore Python}
 \vspace{0.5 cm}
 \includegraphics[width=\linewidth]{python-r-cpp-googletrends-data.png}
 
@@ -69,7 +69,7 @@
 \includegraphics[width=\linewidth]{python-r-cpp-googletrends-dataset.png}
 \end{frame}
 
-\begin{frame}{Why you shouldn't ignore Python}
+\begin{frame}{Why you can't ignore Python}
 \vspace{0.5 cm}
 \includegraphics[width=\linewidth]{python-r-cpp-googletrends-datascience.png}
 
@@ -77,7 +77,7 @@
 \includegraphics[width=\linewidth]{python-r-cpp-googletrends-machinelearning.png}
 \end{frame}
 
-\begin{frame}{Why you shouldn't ignore Python}
+\begin{frame}{Why you can't ignore Python}
 \large
 \vspace{0.4 cm}
 All of the machine learning libraries I could find either have a Python interface or are primarily/exclusively Python.
@@ -90,7 +90,7 @@ All of the machine learning libraries I could find either have a Python interfac
 \hfill \includegraphics[height=0.8 cm]{caffe2-logo.png}
 \hfill \includegraphics[height=0.8 cm]{gluon-logo.png} \mbox{ }
 
-\vspace{0.15 cm}
+\vspace{0.45 cm}
 \mbox{ } \includegraphics[height=0.8 cm]{chainer-logo.png}
 \hfill \includegraphics[height=0.8 cm]{cntk-logo.png}
 \hfill \includegraphics[height=0.8 cm]{lasagne-logo.png}
@@ -99,11 +99,39 @@ All of the machine learning libraries I could find either have a Python interfac
 \hfill \includegraphics[height=0.8 cm]{xgboost-logo.png} \mbox{ }
 \end{frame}
 
-\begin{frame}{Why you shouldn't ignore Python}
+\begin{frame}{Why you can't ignore Python}
 \vspace{0.25 cm}
 \begin{center}
 \includegraphics[width=0.7\linewidth]{mentions-of-programming-languages.png}
 \end{center}
+\end{frame}
+
+\begin{frame}{More significant: what has grown around Python}
+\vspace{0.25 cm}
+\begin{columns}[b]
+\column{0.75\linewidth}
+\only<1>{\includegraphics[height=7.8 cm]{shells-1.png}}
+\only<2>{\includegraphics[height=7.8 cm]{shells-2.png}}
+\only<3>{\includegraphics[height=7.8 cm]{shells-3.png}}
+\only<4>{\includegraphics[height=7.8 cm]{shells-4.png}}
+\only<5>{\includegraphics[height=7.8 cm]{shells-5.png}}
+
+\column{0.25\linewidth}
+\includegraphics[width=\linewidth]{unreasonable-effectiveness.png}
+\vspace{5.3 cm}
+\end{columns}
+\end{frame}
+
+\begin{frame}{More significant: what has grown around Python}
+\vspace{0.1 cm}
+\begin{columns}[b]
+\column{0.75\linewidth}
+\includegraphics[height=7.8 cm]{commute-by-plane.png}
+\column{0.25\linewidth}
+\vspace{0.15 cm}
+\includegraphics[width=\linewidth]{unreasonable-effectiveness.png}
+\vspace{5.15 cm}
+\end{columns}
 \end{frame}
 
 \begin{frame}{}
