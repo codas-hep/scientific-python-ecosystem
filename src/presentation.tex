@@ -163,8 +163,98 @@ All of the machine learning libraries I could find either have a Python interfac
 \end{uncoverenv}
 \end{frame}
 
+\begin{frame}{Numpy was key to Python developing a scientific ecosystem}
+\large
+\vspace{0.1 cm}
+
+\renewcommand{\arraystretch}{1.15}
+\mbox{\hspace{-0.5 cm}\begin{tabular}{c p{0.95\linewidth}}
+1994 & \textcolor{darkorange}{\bf Python} 1.0 released. \\
+1995 & First array package: \textcolor{darkorange}{\bf Numeric} \textcolor{gray}{(a.k.a.\ Numerical, Numerical Python, NumPy).} \\
+2001 & Diverse scientific codebases merged into \textcolor{darkorange}{\bf SciPy}. \\
+2003 & \textcolor{darkorange}{\bf Matplotlib} \\
+2003 & Numeric was limited; \textcolor{darkorange}{\bf numarray} appeared as a competitor with more \mbox{features} \textcolor{gray}{(memory-mapped files, alignment, record arrays)}. \\
+2005 & Two packages were incompatible; could not integrate numarray-based code into SciPy. Travis Oliphant merged the codebases as \textcolor{red}{\bf Numpy}. \\
+2008 & \textcolor{darkorange}{\bf Pandas} \\
+2010 & \textcolor{darkorange}{\bf Scikit-Learn} \\
+2011 & \textcolor{darkorange}{\bf AstroPy} \\
+2012 & \textcolor{darkorange}{\bf Anaconda} \\
+2014 & \textcolor{darkorange}{\bf Jupyter} \\
+2015 & \textcolor{darkorange}{\bf Keras} \\
+\end{tabular}}
+
+\begin{uncoverenv}<2->
+\vspace{-3 cm}
+\hfill \fbox{\begin{minipage}{7 cm}
+\vspace{0.2 cm}
+\begin{center}
+\begin{minipage}{6.5 cm}
+The scientific Python ecosystem could have failed before it started if the Numeric-numarray split hadn't been resolved!
+\end{minipage}
+\vspace{0.2 cm}
+\end{center}
+\end{minipage}}
+\end{uncoverenv}
+\end{frame}
+
+\begin{frame}[fragile]{The Numpythonic mindset}
+\large
+\vspace{0.5 cm}
+Although you can write Python {\tt\normalsize for} loops over Numpy arrays, you don't reap the benefit unless you express your calculation in Numpy ufuncs (universal functions).
+
+\vspace{\baselineskip}
+\begin{columns}[t]
+\column{0.45\linewidth}
+\vspace{-\baselineskip}
+\scriptsize
+\begin{minted}{python}
+pz = numpy.empty(len(pt))
+for i in range(len(pt)):
+    pz[i] = pt[i]*numpy.sinh(eta[i])
+\end{minted}
+
+\vspace{0.5 cm}
+$\mathcal{O}(N)$ Python bytecode instructions, type-checks, interpreter locks.
+
+\column{0.45\linewidth}
+\mbox{\hspace{-0.85 cm}\textcolor{darkblue}{vs}}
+\vspace{-\baselineskip}
+\scriptsize
+\begin{minted}{python}
+pz = pt * numpy.sinh(eta)
+\end{minted}
+\vspace{2\baselineskip}
+
+\vspace{0.5 cm}
+$\mathcal{O}(1)$ Python bytecode instructions, type-checks, interpreter locks.
+
+\vspace{0.1 cm}
+$\mathcal{O}(N)$ statically typed, probably vectorized native bytecode operations on contiguous memory.
+\end{columns}
+
+\large
+\vspace{0.75 cm}
+\uncover<2->{\textcolor{darkorange}{\bf In other words, a \underline{S}ingle (Python) \underline{I}nstruction on \underline{M}ultiple \underline{D}ata.}}
+
+\vspace{0.25 cm}
+\uncover<3->{\textcolor{red}{\bf The same code reorganization that speeds up Python with Numpy would speed up C++ with CUDA or SIMD.}}
+\end{frame}
+
+\begin{frame}{The Numpythonic mindset: Numpy API in CUDA}
+\vspace{0.35 cm}
+\includegraphics[width=\linewidth]{cupy.png}
+\end{frame}
+
+\begin{frame}{The Numpythonic mindset: Numpy API in C++}
+\vspace{0.35 cm}
+\includegraphics[width=\linewidth]{quantstack.png}
+\end{frame}
 
 
+\begin{frame}{}
+
+
+\end{frame}
 
 
 \end{document}
