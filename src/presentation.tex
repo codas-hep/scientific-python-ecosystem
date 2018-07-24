@@ -252,18 +252,25 @@ $\mathcal{O}(N)$ statically typed, probably vectorized native bytecode operation
 
 \begin{frame}[fragile]{}
 \huge
-\vspace{0.5 cm}
+\vspace{0.75 cm}
 \begin{center}
 Switch to the notebooks now or install packages.
 
 \large
-\vspace{1 cm}
-\begin{minipage}{0.35\linewidth}
+\vspace{0.5 cm}
+\begin{minipage}{0.6\linewidth}
 \begin{minted}{bash}
 # install Miniconda...
 conda install pip
 conda install numpy
 conda install pandas
+
+# optional...
+conda install numba
+conda install cython
+
+# if you have a GPU and CUDA...
+conda install -c lukepfister pycuda
 \end{minted}
 \end{minipage}
 \end{center}
